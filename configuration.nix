@@ -59,15 +59,22 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  wget
 	zsh
+	eza
 	git
 	ghostty
 	gnupg
+	stow
 	neovim
+	starship
+	amp-cli
+	claude-code
  ];
 
   # Some programs need SUID wrappers, can be configured further or are
