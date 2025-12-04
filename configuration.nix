@@ -48,12 +48,12 @@
     variant = "";
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with 'passwd'.
   users.users.morpheus = {
     isNormalUser = true;
     description = "morpheus";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
@@ -65,17 +65,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	zsh
-	eza
-	git
-	ghostty
-	gnupg
-	stow
-	neovim
-	starship
-	amp-cli
-	claude-code
- ];
+    git
+    gnupg
+  ];
+
+  # Enable zsh system-wide (required for login shell)
+  programs.zsh.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
