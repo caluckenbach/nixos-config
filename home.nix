@@ -129,6 +129,12 @@
       [[ -d "$HOME/.cargo/bin" ]] && path+=("$HOME/.cargo/bin")
       export PATH
     '';
+
+    profileExtra = ''
+      if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+        exec startx
+      fi
+    '';
   };
 
   programs.starship = {

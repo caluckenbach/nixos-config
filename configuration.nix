@@ -114,4 +114,6 @@
     pinentryPackage = pkgs.pinentry-curses;
   };
 
+  services.getty.autologinUser = "morpheus";
+
 }
