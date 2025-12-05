@@ -27,15 +27,18 @@
     lazygit
     bun
     uv
-    ruff
-    ty
     amp-cli
     claude-code
     rustup
     gcc
-    # nvim related
+
+    # lsp and formatters
     nil
     nixfmt-rfc-style
+    lua-language-server
+    stylua
+    ruff
+    ty
   ];
 
   xsession = {
