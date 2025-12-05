@@ -99,10 +99,13 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
 
-  services.xserver.enable = true;
   hardware.graphics.enable = true;
 
-  services.xserver.displayManager.startx.enable = true;
+  services.xserver = {
+    enable = true;
+    displayManager.startx.enable = true;
+
+  };
 
   virtualisation.vmware.guest.enable = true;
 

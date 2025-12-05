@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.username = "morpheus";
@@ -20,6 +20,31 @@
     lazygit
     yazi
   ];
+
+  xsession = {
+    enable = true;
+    windowManager.i3 = {
+      enable = true;
+      package= pkgs.i3;
+      config = {
+        bars = [];
+        window.border = 0;
+        defaultWorkspace = "1";
+
+        startup = [
+          { command = "ghostty"; notification = false; }
+        ];
+
+        keybindings = lib.mkOptionDefault {
+          "Mod1+Shift+e" = "exec i3-msg exit";
+        };
+      };
+
+      extraConfig = ''
+        for_window [class="^Ghostty$"] fullscreen enable
+      '';
+    };
+  };
 
   programs.zsh = {
     enable = true;
