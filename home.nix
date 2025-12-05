@@ -30,7 +30,9 @@
     amp-cli
     claude-code
     rustup
+    bacon
     gcc
+    fastfetch
 
     # lsp and formatters
     nil
