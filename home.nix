@@ -11,14 +11,17 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    eza
-    ghostty
     stow
+    ghostty
+    ripgrep
+    eza
+    jujutsu
+    yazi
     amp-cli
     claude-code
-    ripgrep
     lazygit
-    yazi
+    bun
+    uv
   ];
 
   xsession = {
