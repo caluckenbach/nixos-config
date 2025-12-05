@@ -15,13 +15,15 @@
     ghostty
     ripgrep
     eza
-    jujutsu
+    fd
+    gh
+    htop
     yazi
-    amp-cli
-    claude-code
     lazygit
     bun
     uv
+    amp-cli
+    claude-code
   ];
 
   xsession = {
@@ -155,6 +157,10 @@
       push.autoSetupRemote = true;
       pull.rebase = true;
     };
+  };
+
+  programs.jujutsu = {
+    enable = true;
   };
 
   programs.neovim = {
