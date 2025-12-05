@@ -32,6 +32,7 @@
         defaultWorkspace = "1";
 
         startup = [
+          { command = "vmware-user-suid-wrapper"; notification = false; }
           { command = "ghostty"; notification = false; }
         ];
 
@@ -102,7 +103,7 @@
       lg = "lazygit";
     };
 
-    initExtra = ''
+    initContent = ''
       # ldot function (list dotfiles)
       ldot() { eza -a | rg "^\." }
 
