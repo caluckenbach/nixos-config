@@ -137,4 +137,4 @@ Stable CLI tools, development tools, and shared configuration belong in Nix. Hom
 
 Zed is installed as a macOS app, while its settings are managed declaratively.
 
-The Neovim configuration still lives in `~/Code/.dotfiles` and is linked into `~/.config/nvim`. `just doctor` verifies that link and the external tools the editor expects.
+The Neovim configuration lives in the standalone `~/Code/nvim` repository. Home Manager links it into `~/.config/nvim`. `just doctor` verifies that link and the external tools the editor expects.

@@ -20,7 +20,7 @@ require_cmd() {
   fi
 }
 
-nvim_source="$HOME/Code/.dotfiles/nvim/.config/nvim"
+nvim_source="$HOME/Code/nvim"
 nvim_target="$HOME/.config/nvim"
 
 if [[ -d "$nvim_source" && -e "$nvim_source/.git" ]]; then
