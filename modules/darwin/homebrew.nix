@@ -15,6 +15,7 @@
       "cocoapods"
       "mas"
       "mole" # The nixpkgs package with this name is a different program
+      "planetscale/tap/pscale"
     ];
 
     # Zed is intentionally omitted: install the official app for fresher
@@ -52,8 +53,10 @@
     taps = {
       "homebrew/homebrew-core" = inputs.homebrew-core;
       "homebrew/homebrew-cask" = inputs.homebrew-cask;
+      "planetscale/homebrew-tap" = inputs.planetscale-tap;
     };
 
+    trust.formulae = [ "planetscale/tap/pscale" ];
     mutableTaps = false;
   };
 }

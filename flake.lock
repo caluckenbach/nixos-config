@@ -147,6 +147,22 @@
         "type": "github"
       }
     },
+    "planetscale-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787353952,
+        "narHash": "sha256-wrnDL+qsZWVZTNyccjym7SQ2YWD7dNx7TD5cGm4LqYc=",
+        "owner": "planetscale",
+        "repo": "homebrew-tap",
+        "rev": "5802bb9da68ae4b0d6a92688e70debdc5fab24b2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "planetscale",
+        "repo": "homebrew-tap",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "brew-src": "brew-src",
@@ -156,7 +172,8 @@
         "homebrew-core": "homebrew-core",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "planetscale-tap": "planetscale-tap"
       }
     },
     "rust-overlay": {

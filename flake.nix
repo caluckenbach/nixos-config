@@ -44,6 +44,10 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+    planetscale-tap = {
+      url = "github:planetscale/homebrew-tap";
+      flake = false;
+    };
   };
 
   outputs =
